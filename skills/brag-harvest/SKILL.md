@@ -11,7 +11,8 @@ each fresh win to the `brag-note` skill for its interview. The failure mode
 this skill exists to prevent is silent loss — work that happened, was never
 written down, and is gone by review time.
 
-Files: brag book at `~/brag-book/BRAG_BOOK.md`, harvest state at
+Files: brag book at `~/brag-book/`, organized as one quarter file per
+`~/brag-book/<YYYY>/<YYYY>-Q<n>.md`; harvest state at
 `~/brag-book/.harvest-state`, pending inbox at `~/brag-book/PENDING.md`.
 
 ## Guiding rule: degrade, never abort
@@ -37,9 +38,10 @@ continue below.
 ### 1. Determine the window
 
 Anchor = the most recent of: the `last-run:` date in `.harvest-state`, and
-the newest `## YYYY-MM-DD` heading in `BRAG_BOOK.md`. Neither exists → last
-7 days. Harvest from the anchor to today, and tell the user the window
-you're using.
+the newest `## YYYY-MM-DD` heading across the quarter files — in practice
+the newest heading in the lexicographically-last `~/brag-book/*/*-Q*.md`
+file. Neither exists → last 7 days. Harvest from the anchor to today, and
+tell the user the window you're using.
 
 ### 2. Probe sources, then harvest
 
@@ -73,8 +75,9 @@ e.g.:
 
 Normalize every finding to `(date, title, source, link/ID)`. Drop candidates
 already covered — the ticket ID, PR URL, or an obvious title match appears
-in `BRAG_BOOK.md` — and candidates previously dismissed (listed in
-`.harvest-state`). Report covered/dismissed only as counts. Slack kudos that
+in any `~/brag-book/*/*-Q*.md` quarter file — and candidates previously
+dismissed (listed in `.harvest-state`). Report covered/dismissed only as
+counts. Slack kudos that
 match a surviving candidate (same work, by date/keywords) don't become their
 own candidate: attach them to pre-fill that note's **Praise** field.
 

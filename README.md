@@ -8,7 +8,7 @@ Each skill is a folder under [`skills/`](./skills) containing a `SKILL.md` with 
 
 | Skill | Description |
 | ----- | ----------- |
-| [`brag-note`](./skills/brag-note) | Turns a ticket, PR, task description, or any summary of work you did into a structured brag-book entry. It extracts what it can from the input, interviews you about the gaps (contribution, business impact, stakeholders, praise, skills), pushes for quantified impact, and saves the entry newest-first to `~/brag-book/BRAG_BOOK.md` — evidence ready for performance reviews, raises, and resume updates. |
+| [`brag-note`](./skills/brag-note) | Turns a ticket, PR, task description, or any summary of work you did into a structured brag-book entry. It extracts what it can from the input, interviews you about the gaps (contribution, business impact, stakeholders, praise, skills), pushes for quantified impact, and saves the entry newest-first to a per-quarter file organized by year (`~/brag-book/<year>/<year>-Q<quarter>.md`) — evidence ready for performance reviews, raises, and resume updates. |
 | [`brag-harvest`](./skills/brag-harvest) | Finds your recent wins automatically: harvests merged PRs and closed issues via the `gh` CLI, resolved Jira tickets via a Jira MCP, and Slack kudos / incident contributions / coworker-help threads via a Slack MCP. Dedupes against your brag book (and remembers what you dismissed), then feeds each selected win into `brag-note` for the interview. Resilient by design — unavailable sources are warned about and skipped, never fatal. Supports scheduled runs that queue candidates into a pending inbox for your next interactive session. |
 
 ## Install

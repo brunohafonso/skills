@@ -11,7 +11,11 @@ review, promotion packet, raise negotiation, or resume months later. The whole
 point is that memory fades — the entry must stand on its own when the context
 is long gone.
 
-The brag book lives at `~/brag-book/BRAG_BOOK.md`. Praise screenshots live in
+The brag book is the `~/brag-book/` directory, organized by year and quarter:
+each entry lives in `~/brag-book/<YYYY>/<YYYY>-Q<n>.md` (e.g.
+`~/brag-book/2026/2026-Q3.md`), where the year and quarter come from the
+entry's **Date** — when the work shipped, not today. Quarters: Q1 = Jan–Mar,
+Q2 = Apr–Jun, Q3 = Jul–Sep, Q4 = Oct–Dec. Praise screenshots live in
 `~/brag-book/praise/`.
 
 ## Workflow
@@ -73,16 +77,17 @@ If the user mentions praise, remind them to screenshot it into
 
 ### 4. Write the entry
 
-Insert the entry at the **top** of `~/brag-book/BRAG_BOOK.md` (newest first,
-directly under the file header) so the most recent wins are the first thing
-seen at review time. If the file doesn't exist yet, create it with the header
-below. Omit optional fields that are empty — no "N/A" noise.
+Pick the quarter file from the entry's Date (`~/brag-book/<YYYY>/<YYYY>-Q<n>.md`)
+and insert the entry at its **top** (newest first, directly under the file
+header) so the most recent wins are the first thing seen at review time. If
+the year folder or quarter file doesn't exist yet, create it — the file starts
+with the header below. Omit optional fields that are empty — no "N/A" noise.
 
 ```markdown
-# Brag Book
+# Brag Book — 2026 Q3
 
 Evidence of the value I bring. One entry per win, newest first.
-Praise screenshots: ./praise/
+Praise screenshots: ../praise/
 
 ---
 
@@ -103,7 +108,13 @@ Write the contribution in first person implied, past tense, action verbs —
 resume-ready. Keep the entry tight: 3–6 lines of substance, not a project
 report.
 
+**Legacy migration:** if `~/brag-book/BRAG_BOOK.md` exists (the old flat
+layout), move each of its entries into the right quarter file by its
+`## YYYY-MM-DD` heading, preserving the entry text verbatim and keeping
+newest-first order within each file, then delete the flat file — confirm
+with the user before deleting.
+
 ### 5. Confirm
 
 Show the final entry in the conversation and confirm it was saved, with the
-file path. If the user corrects anything, edit the entry in place.
+quarter-file path it went into. If the user corrects anything, edit the entry in place.
